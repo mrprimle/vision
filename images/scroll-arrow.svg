@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="22px" viewBox="0 0 48 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="DESKTOP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-6" transform="translate(-696.000000, -931.000000)" fill="#E2E6E8" fill-rule="nonzero">
+            <path d="M744,932.964974 C744,933.465849 743.76,933.966725 743.28,934.313485 L720,953 L696.72,934.313485 C695.76,933.542907 695.76,932.348511 696.72,931.577933 C697.68,930.807356 699.168,930.807356 700.128,931.577933 L720,947.567426 L739.92,931.577933 C740.88,930.807356 742.368,930.807356 743.328,931.577933 C743.76,931.963222 744,932.464098 744,932.964974 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>
