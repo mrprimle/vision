@@ -74,9 +74,32 @@ Scroller.prototype = {
 var scroller = new Scroller();  
 scroller.init();
     
-    
+var isOpenMenu = false;    
 $(".menu-icon").on("click", function() {
-                  $("nav ul").toggleClass("showing");
+    if (isOpenMenu) {
+        $("nav ul li:nth-child(1) a").removeClass("showing-li showing-li-a");
+        $("nav ul li:nth-child(2) a").removeClass("showing-li showing-li-b");
+        $("nav ul li:nth-child(3) a").removeClass("showing-li showing-li-c");
+        $("nav ul li:nth-child(4) a").removeClass("showing-li showing-li-d");
+        
+        $("nav ul li:nth-child(1) a").addClass("closing-li showing-li-d");
+        $("nav ul li:nth-child(2) a").addClass("closing-li showing-li-c");
+        $("nav ul li:nth-child(3) a").addClass("closing-li showing-li-b");
+        $("nav ul li:nth-child(4) a").addClass("closing-li showing-li-a");
+        $("nav ul").toggleClass("showing").addClass("showing-transition");
+    } else {
+        $("nav ul li:nth-child(1) a").removeClass("closing-li showing-li-d");
+        $("nav ul li:nth-child(2) a").removeClass("closing-li showing-li-c");
+        $("nav ul li:nth-child(3) a").removeClass("closing-li showing-li-b");
+        $("nav ul li:nth-child(4) a").removeClass("closing-li showing-li-a");
+        
+        $("nav ul").toggleClass("showing").removeClass("showing-transition");
+        $("nav ul li:nth-child(1) a").addClass("showing-li showing-li-a");
+        $("nav ul li:nth-child(2) a").addClass("showing-li showing-li-b");
+        $("nav ul li:nth-child(3) a").addClass("showing-li showing-li-c");
+        $("nav ul li:nth-child(4) a").addClass("showing-li showing-li-d");
+    }
+    isOpenMenu = !isOpenMenu;
             });
     
 // Scrolling Effect

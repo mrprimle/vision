@@ -107,13 +107,19 @@ nav.black ul {
 
 nav ul li {
       display: inline-block;
-      padding: 16px 40px;;
+      padding: 16px 20px;;
 }
 
 nav ul li a {
-      text-decoration: none;
+      display: block;
+      outline: none;
       color: #fff;
-      font-size: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+    padding: 5px 20px;
 }
 
 .menu-icon {
@@ -126,6 +132,8 @@ nav ul li a {
       cursor: pointer;
       color: #fff;
       display: none;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 
@@ -434,6 +442,8 @@ img{
       nav ul {
             max-height: 0px;
             background: rgba(0, 0, 0, 0.9);
+          position: absolute;
+          width: 100%;
       }
 
       nav.black ul {
@@ -443,12 +453,67 @@ img{
       .showing {
             max-height: 34em;
       }
+    .showing-li {
+        transition: all 0.8s ease-out;
+        animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-name: slide-right-open;
+	animation-fill-mode: both;
+}
+
+    .closing-li {
+        transition: all 0.8s ease-out;
+        animation-duration: .5s;
+	animation-timing-function: ease-out;
+	animation-name: slide-right-close;
+	animation-fill-mode: both;
+}
+@keyframes slide-right-open {
+	from {
+		opacity: 0;
+        transform: translateX(-25%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(-18%);
+	}
+}
+    
+    @keyframes slide-right-close {
+	from {
+		opacity: 1;
+        transform: translateX(-18%);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(0);
+	}
+}
+    
+    .showing-transition {
+        transition-delay: .5s;
+    }
+    .showing-li-a {
+            animation-delay: .2s;
+      }
+    .showing-li-b {
+            animation-delay: .3s;
+      }
+    .showing-li-c {
+            animation-delay: .4s;
+      }
+    .showing-li-d {
+            animation-delay: .5s;
+      }
 
       nav ul li {
             box-sizing: border-box;
             width: 100%;
             padding: 24px;
-            text-align: center;
+/*            text-align: center;*/
+/*          padding-right: 10%;*/
+          display: block;
+            
       }
 
       .menu-icon {
