@@ -1,8 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+* {
+    padding: 0;
+  margin: 0;
+    box-sizing: border-box;
+}
 html, body {
   padding: 0;
   margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -46,13 +52,10 @@ header {
     overflow: hidden;
 }
 
-header, .site, .placeholder {
+header, .product-desc, .placeholder {
     position: relative;
 }
 
-.site { 
-  z-index: 10; 
-}
 
 .placeholder {
   z-index: 0;
@@ -361,43 +364,119 @@ img{
 
 
 
-
-.site {
-  padding: 20em 0;
-  text-align: center;
-  background-color: #efefef;
-  font-size: .8em;
-  color: #444;
-  position:relative
+.product-desc { 
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    z-index: 10;
 }
-.site a {
-  color: #666;
-  text-decoration: none;
-}
-.site a:hover {
-  color: #222;
-}
-
-.site nav{
-  position:absolute;
-  top:0;
-  left:0;
-  background:#222;
-  width:100%
-}
-.site nav a{
-  padding:10px 30px;
-  font-size:1.3em;
-  display:inline-block
-}
-.site nav a:hover{
-  background:#333;
-  color:#fff
+.product-desc p {
+    margin-bottom: 0;
 }
 
 
+.capabilities {
+    position: relative;
+    background-color: #fff;
+    z-index: 10;
+    
+/*    min-height: 100vh;*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1f26;
+}
+
+.capa-grid {
+    width: 50%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.capa-left {
+    width: 50%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.capa-right {
+    width: 50%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    flex-direction: column;
+    margin-left: -50px;
+}
+
+.capabilities-container {
+/*  width: 100%;*/
+/*  max-width: 1000px;*/
+/*  margin: 50px auto;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    margin: 0 -75px;
+  /* background-color: aqua; */
+}
+.capabilities-left {
+  width: 50%;
+  height: 600px;
+  background: url(https://images.unsplash.com/photo-1542662565-7e4b66bae529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80)
+    no-repeat center / cover;
+  border-radius: 8px;
+}
+.capabilities-right {
+  width: 50%;
+  min-height: 400px;
+  background-color: #303137;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  color: white;
+  margin-left: -150px;
+}
+.capabilities-right h1 {
+  font-size: 40px;
+  font-weight: lighter;
+}
+.capabilities-right p {
+  margin: 20px 0;
+  font-weight: 500;
+  line-height: 25px;
+}
 
 
+@media only screen and (max-width: 768px) {
+  .capabilities-container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 10px;
+  }
+    .capa-grid {
+        flex-direction: column;
+    }
+    .capa-left {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .capa-right {
+        width: 100%;
+        margin: 10px auto;
+    }
+  .capabilities-left {
+    width: 100%;
+    height: 400px;
+  }
+  .capabilities-right {
+    width: 90%;
+    margin: 0;
+    margin-top: -100px;
+  }
+}
 
 
 
