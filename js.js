@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    
+    var image = document.getElementsByClassName('capabilities-right');
+new simpleParallax(image, {
+	overflow: true,
+    scale: 1.8
+});
+    
+    var image = document.getElementsByClassName('capa-rev-left');
+new simpleParallax(image, {
+	overflow: true,
+    scale: 1.6
+});
+    
+    
+    
 var $content = $('header .content')
   , $blur    = $('header .overlay')
   , wHeight  = $(window).height();
@@ -6,6 +21,8 @@ var $content = $('header .content')
 $(window).on('resize', function(){
   wHeight = $(window).height();
 });
+    
+    
 
 window.requestAnimFrame = (function()
 {
@@ -157,6 +174,9 @@ $("nav ul li").on("click", function() {
       })
     
     
+
+    
+
     
     
     
