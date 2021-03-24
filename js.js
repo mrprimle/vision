@@ -1,16 +1,23 @@
 $(document).ready(function () {
     
     var image = document.getElementsByClassName('capabilities-right');
-new simpleParallax(image, {
+
+    var cardsPara = new simpleParallax(image, {
 	overflow: true,
     scale: 1.8
 });
     
     var image = document.getElementsByClassName('capa-rev-left');
-new simpleParallax(image, {
+
+    var cardsRevPara = new simpleParallax(image, {
 	overflow: true,
-    scale: 1.6
+    scale: 1.5
 });
+    
+    cardsPara.refresh();
+    cardsRevPara.refresh();
+    
+    
     
     
     
@@ -84,6 +91,15 @@ Scroller.prototype = {
     $blur.css({
       'opacity' : blurScroll / wHeight
     });
+      
+      if (currentScrollY > $(".product-desc .section-header").offset().top - wHeight / 1.3) {
+          $(".product-desc .section-header").addClass("slideH-right");
+      }
+      
+      if (currentScrollY > $(".capabilities .section-header").offset().top - wHeight / 1.3) {
+          $(".capabilities .section-header").addClass("slideH-right");
+      }
+      
   }
 };
 
