@@ -100,6 +100,12 @@ Scroller.prototype = {
           $(".capabilities .section-header").addClass("slideH-right");
       }
       
+      if (currentScrollY > $(".founder .section-header").offset().top - wHeight / 1.3) {
+          $(".founder .section-header").addClass("slideH-right");
+          $(".founder .founder-text").addClass("slideH-right");
+          $(".founder .founder-wrapImg").addClass("slideH-right");
+      }
+      
   }
 };
 

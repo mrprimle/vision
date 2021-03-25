@@ -384,10 +384,7 @@ img{
     margin-bottom: 0;
 }
 
-#desk-header {
-    margin-bottom: 3%;
-    margin-right: 60%;
-}
+
 
 .text-wrap {
     min-height: 50vh;
@@ -412,8 +409,48 @@ img{
     font-size: 1.3em;
 }
 
-
-
+.founder {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    padding-bottom: 0;
+}
+.founder-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+.founder-wrapImg {
+    width: 30%;
+    margin-right: 10%;
+    position: relative;
+    transition: all .5s ease-out;
+    transition-delay: .2s;
+    opacity: 0;
+    transform: translateX(-20%);
+}
+.founder-text {
+    position: relative;
+    width: 60%;
+    transition: all .5s ease-out;
+    transition-delay: .3s;
+    opacity: 0;
+    transform: translateX(-20%);
+}
+.founder-text span {
+    color: #ec4858;
+}
+.founder-text h2 {
+    margin-bottom: 2%;
+}
 
 .capabilities {
     position: relative;
@@ -441,6 +478,11 @@ img{
     transform: translateX(-40%);
     opacity: 0;
 }
+.desk-header {
+    margin-bottom: 3%;
+    margin-right: 60%;
+}
+
 .section-header h1 {
     color: #fff;
     font-weight: 700;
@@ -592,6 +634,21 @@ img{
     .section-header {
         margin-right: 20%;
     }
+    .founder-wrap {
+        flex-direction: column;
+        width: 100%;
+    }
+    .founder-wrapImg {
+        margin-right: 0;
+        width: 40%;
+        margin-bottom: 5%;
+    }
+    .founder-text {
+        width: 100%;
+    }
+    .founder {
+        padding-bottom: 20px;
+    }
 
 }
 
@@ -605,6 +662,13 @@ img{
 
     header hgroup {
         top: 53%;
+    }
+    .founder-wrapImg {
+        width: 30%;
+    }
+    .founder-text h2 {
+        font-size: 1.2em;
+        margin-bottom: 5%;
     }
 
 }
@@ -790,5 +854,11 @@ img{
     .button-wrapp {
         font-size: 12px;
         padding: 8px 20px;
+    }
+    .founder-wrapImg  {
+        width: 70%;
+    }
+    .founder-text h2 {
+        font-size: 1.2em;
     }
 }
