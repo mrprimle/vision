@@ -765,7 +765,10 @@ img{
     }
     .text-wrap {
         width: 100%;
-        min-height: 70vh;
+        min-height: 80vh;
+    }
+    .desc-text {
+        font-size: 1em;
     }
 }
 
