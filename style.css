@@ -555,6 +555,9 @@ img{
   background: url("images/me.jpg") no-repeat center / cover;
   border-radius: 15px;
 }
+#mrprimle {
+    background: url("images/mrprimle.jpg") no-repeat center / cover;
+}
 .capabilities-right {
   width: 50%;
   min-height: 400px;
